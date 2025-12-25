@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<title>Bosh sahifa | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+<b>Portfolio</b>
+<div>
+<a href="index.html">Bosh sahifa</a>
+<a href="about.html">Haqida</a>
+<a href="skills.html">Ko‘nikmalar</a>
+<a href="contact.html">Aloqa</a>
+<span class="toggle" onclick="toggleMode()">🌙 / ☀️</span>
+</div>
+</nav>
+
+<div class="container hero">
+
+<!-- RASM BLOKI -->
+<div class="card" style="text-align:center">
+<img id="profileImg" src="https://via.placeholder.com/240" alt="Profil rasm">
+
+<br><br>
+
+<input 
+ type="file" 
+ accept="image/*" 
+ onchange="loadImage(event)"
+ style="display:none" 
+ id="uploadImg">
+
+<label for="uploadImg" style="
+ cursor:pointer;
+ background:#6366f1;
+ color:white;
+ padding:12px 25px;
+ border-radius:25px;
+ display:inline-block;
+ transition:.3s;">
+ 📷 Rasm yuklash
+</label>
+</div>
+
+<!-- MA'LUMOT -->
+<div class="card">
+<h1 class="section-title">Murodullayev Jahongir</h1>
+
+<p><b>Yo‘nalish:</b> Graphic & UI/UX Designer</p>
+<p><b>Tug‘ilgan sana:</b> 7-avgust</p>
+<p><b>Universitet:</b> Toshkent Axborot Texnologiyalari Universiteti</p>
+<p><b>Kurs:</b> 3-kurs, 081-guruh</p>
+<p><b>Fan:</b> Veb ilovalar yaratish</p>
+
+<p>
+Men zamonaviy grafik va interfeys dizayni sohasida faoliyat yuritaman.
+Ushbu veb-sayt akademik loyiha sifatida ishlab chiqilgan bo‘lib,
+responsive dizayn, animatsiya va interaktiv elementlarni o‘z ichiga oladi.
+</p>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+
+<script>
+function loadImage(event){
+ const img = document.getElementById('profileImg')
+ img.src = URL.createObjectURL(event.target.files[0])
+}
+</script>
+
+</body>
+</html>
