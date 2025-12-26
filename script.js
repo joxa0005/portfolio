@@ -1,8 +1,7 @@
-function toggleMode(){
- document.body.classList.toggle("light")
- localStorage.theme = document.body.className
-}
-
-if(localStorage.theme){
- document.body.className = localStorage.theme
-}
+window.addEventListener("scroll", () => {
+    document.querySelectorAll(".fade").forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+            el.style.opacity = 1;
+        }
+    });
+});
